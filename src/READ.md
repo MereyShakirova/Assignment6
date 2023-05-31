@@ -4,6 +4,8 @@
 !(*In this assignment you are asked to implement BFS and Djakstra for Edge-weighted graph with Vertex instead of Edge.
 Provide your own implementation for classes:  Vertex, WeightedGraph, Search, BreadthFirstSearch, DijkstraSearch and Main (with example usage).*)!
 
+### ________________________________________
+
 ### Vertex class:
 #### *Explanation:*
 The Vertex class represents a vertex in a graph. It contains a data element of generic type V, which can be any object representing the vertex. It also maintains a map adjacentVertices, where the keys are adjacent vertices and the values are the weights of the edges connecting them.
@@ -28,6 +30,8 @@ The Vertex class represents a vertex in a graph. It contains a data element of g
         return adjacentVertices;
         }
     }
+
+### ________________________________________
 
 ### WeightedGraph class:
 #### *Explanation:*
@@ -66,6 +70,8 @@ The WeightedGraph class represents a weighted graph. It maintains a map map wher
         }
     }
 
+### ________________________________________
+
 ### Search class:
 #### *Explanation:*
 The Search class provides a breadth-first search (BFS) algorithm for a given graph. It takes a WeightedGraph object in its constructor. The bfs method performs a BFS traversal starting from a given start vertex. It returns a list of vertices visited during the traversal.
@@ -98,6 +104,8 @@ The Search class provides a breadth-first search (BFS) algorithm for a given gra
             return called;
         }
     }
+
+### ________________________________________
 
 ### BreadthFirstSearch class
 #### *Explanation:*
@@ -135,6 +143,7 @@ The BreadthFirstSearch class is an example implementation of the Search class. I
         }
     }
 
+### ________________________________________
 
 ### DijkstraSearch class
 #### *Explanation:*
@@ -173,5 +182,50 @@ The BreadthFirstSearch class is an example implementation of the Search class. I
             return distances;
         }
     }
+
+### ________________________________________
+
+### Main class:
+#### *Explanation:*
+The Main class demonstrates the usage of the implemented classes. It creates a WeightedGraph object, adds vertices and edges to the graph, and performs a BFS traversal and Dijkstra's algorithm starting from a specific vertex. The results are printed to the console.
+#### *Here is the solution code:*
+![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
+
+    import java.util.List;
+    import java.util.Map;
+    
+    public class Main{
+    public static void main(String[] args){
+    WeightedGraph<String> graph = new WeightedGraph<>();
+    Vertex<String> vertex1 = new Vertex<>("Mu");
+    Vertex<String> vertex2 = new Vertex<>("Sigma");
+    Vertex<String> vertex3 = new Vertex<>("Alpha");
+    Vertex<String> vertex4 = new Vertex<>("Tau");
+    
+            graph.addVertex(vertex1);
+            graph.addVertex(vertex2);
+            graph.addVertex(vertex3);
+            graph.addVertex(vertex4);
+    
+            graph.addEdge(vertex1, vertex2, 3.4);
+            graph.addEdge(vertex1, vertex3, 2.5);
+            graph.addEdge(vertex2, vertex4, 5.7);
+            graph.addEdge(vertex2, vertex3, 8.1);
+            graph.addEdge(vertex3, vertex4, 7.8);
+            graph.addEdge(vertex4, vertex1, 1.6);
+    
+            BreadthFirstSearch<String> bfs = new BreadthFirstSearch<>(graph);
+            List<Vertex<String>> bfsTraversal = bfs.BFS(vertex1);
+            System.out.println("BFS: " + bfsTraversal);
+    
+            DijkstraSearch<String> dijkstra = new DijkstraSearch<>(graph);
+            Map<Vertex<String>, Double> distances =dijkstra.dijkstra(vertex1);
+            System.out.println("Dijkstra distances from vertex1: ");
+            for(Map.Entry<Vertex<String>, Double> entry : distances.entrySet()){
+                System.out.println(entry.getKey().getData() + ": " + entry.getValue());
+            }
+        }
+    }
+
 
 # Thank you for your attention
