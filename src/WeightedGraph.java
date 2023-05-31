@@ -7,5 +7,13 @@ public class WeightedGraph<V>{
     public void addVertex(Vertex<V> vertex){
         map.put(vertex, new ArrayList<>());
     }
+public void addEdge(Vertex<V> source, Vertex<V> destination, double weight) {
+    if (map.containsKey(source) && map.containsKey(destination)) {
+        source.addAdjacentVertex(destination, weight);
+        map.get(source).add(destination);
+    } else {
+        throw new IllegalArgumentException("Vertex not located in this graph.");
+    }
 
+}
 }
