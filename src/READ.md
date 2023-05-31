@@ -9,6 +9,26 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
+    import java.util.*;
+    public class Vertex<V> {
+        private V data;
+        private Map<Vertex<V>, Double> adjacentVertices;
+        public Vertex(V data) {
+        this.data = data;
+        this.adjacentVertices = new HashMap<>();
+        }
+        public V getData() {
+        return data;
+        }
+        public void addAdjacentVertex(Vertex<V> destination, double weight) {
+        adjacentVertices.put(destination, weight);
+        }
+        public Map<Vertex<V>, Double> getAdjacentVertices() {
+        return adjacentVertices;
+        }
+    }
+
+
 ### WeightedGraph class:
 #### *Explanation:*
 #### *Here is the solution code:*
