@@ -1,7 +1,7 @@
 import java.util.*;
 public class WeightedGraph<V>{
     private Map<Vertex<V>, List<Vertex<V>>> map;
-    private WeightedGraph(){
+    WeightedGraph(){
         this.map = new HashMap<>();
     }
     public void addVertex(Vertex<V> vertex){

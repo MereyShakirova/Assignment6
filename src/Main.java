@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Map;
+
 public class Main{
     public static void main(String[] args){
         WeightedGraph<String> graph = new WeightedGraph<>();
@@ -19,8 +22,15 @@ public class Main{
         graph.addEdge(vertex4, vertex1, 1.6);
 
         BreadthFirstSearch<String> bfs = new BreadthFirstSearch<>(graph);
-        List<Vertex<String>> bfsTraversal = bfs.bfs(vertex1);
+        List<Vertex<String>> bfsTraversal = bfs.BFS(vertex1);
         System.out.println("BFS: " + bfsTraversal);
+
+        DijkstraSearch<String> dijkstra = new DijkstraSearch<>(graph);
+        Map<Vertex<String>, Double> distances =dijkstra.dijkstra(vertex1);
+        System.out.println("Dijkstra distances from vertex1: ");
+        for(Map.Entry<Vertex<String>, Double> entry : distances.entrySet()){
+            System.out.println(entry.getKey().getData() + ": " + entry.getValue());
+        }
     }
 }
 
