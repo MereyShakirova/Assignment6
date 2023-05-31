@@ -16,14 +16,16 @@ public void addEdge(Vertex<V> source, Vertex<V> destination, double weight) {
     }
 
 }
-public List<Vertex<V>> getAdjacentVertices(Vertex<V> vertex){
-        if(map.containsKey(vertex)){
-            return map.get(vertex);
-        }else{
-            throw new IllegalArgumentException("Vertex not located in this graph.");
-        }
-        public Set<Vertex<V>> getVertices(){
+public List<Vertex<V>> getAdjacentVertices(Vertex<V> vertex) {
+    if (map.containsKey(vertex)) {
+        return map.get(vertex);
+    } else {
+        throw new IllegalArgumentException("Vertex not located in this graph.");
+    }
+}
+
+public Set<Vertex<V>> getVertices(){
             return map.keySet();
     }
-    }
+
 }
