@@ -10,6 +10,16 @@ public class DijkstraSearch<V> {
         for(Vertex<V> vertex : graph.getVertices()){
             distances.put(vertex, Double.MAX_VALUE);
         }
-
+        distances.put(startVertex, 0.0);
+        priorityQueue.offer(startVertex);
+        while(!priorityQueue.isEmpty()){
+            Vertex<V> currentNode = priorityQueue.poll();
+            double currentDistance = distances.get(currentNode);
+            for(Map.Entry<Vertex<V>, Double> entry : currentNode.getAdjacentVertices().entrySet()){
+                Vertex<V> nextNode = entry.getKey();
+                double edgeWeight = entry.getValue();
+                double newDistance = currentDistance + edgeWeight;
+            }
+        }
     }
 }
