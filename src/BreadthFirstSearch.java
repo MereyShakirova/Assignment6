@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Arrays;
 public class BreadthFirstSearch<V> extends Search<V> {
     private Set<Vertex<V>> visited;
     public BreadthFirstSearch(WeightedGraph<V> graph){
@@ -9,6 +10,8 @@ public class BreadthFirstSearch<V> extends Search<V> {
         Queque<Vertex<V>> queque = new LinkedList<>();
         queque.offer(startVertex);
         visited.add(startVertex);
-        while(!queque)
+        while(!queque.isEmpty()){
+            Vertex<V> currentVertex = queque.poll();
+        }
     }
 }
