@@ -9,6 +9,4 @@ public class Vertex<V> {
         adjacentVertices.put(destination, weight);
     }
 
-    private class HashMap {
-    }
 }
