@@ -19,7 +19,13 @@ public class DijkstraSearch<V> {
                 Vertex<V> nextNode = entry.getKey();
                 double edgeWeight = entry.getValue();
                 double newDistance = currentDistance + edgeWeight;
+                if(newDistance < distances.get(nextNode)){
+                    priorityQueue.remove(nextNode);
+                    distances.put(nextNode, newDistance);
+                    priorityQueue.offer(nextNode);
+                }
             }
         }
+        return distances;
     }
 }
