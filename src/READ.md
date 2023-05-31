@@ -6,6 +6,7 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 
 ### Vertex class:
 #### *Explanation:*
+The Vertex class represents a vertex in a graph. It contains a data element of generic type V, which can be any object representing the vertex. It also maintains a map adjacentVertices, where the keys are adjacent vertices and the values are the weights of the edges connecting them.
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
@@ -30,6 +31,7 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 
 ### WeightedGraph class:
 #### *Explanation:*
+The WeightedGraph class represents a weighted graph. It maintains a map map where the keys are the vertices and the values are lists of adjacent vertices. It provides methods to add vertices, add edges between vertices, and retrieve the adjacent vertices of a given vertex. It also provides a method to retrieve all the vertices in the graph.
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
@@ -66,6 +68,7 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 
 ### Search class:
 #### *Explanation:*
+The Search class provides a breadth-first search (BFS) algorithm for a given graph. It takes a WeightedGraph object in its constructor. The bfs method performs a BFS traversal starting from a given start vertex. It returns a list of vertices visited during the traversal.
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
@@ -98,6 +101,7 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 
 ### BreadthFirstSearch class
 #### *Explanation:*
+The BreadthFirstSearch class is an example implementation of the Search class. It uses the BFS algorithm to traverse the graph starting from a given start vertex. The bfs method returns a list of vertices visited during the traversal.
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
@@ -134,6 +138,7 @@ Provide your own implementation for classes:  Vertex, WeightedGraph, Search, Bre
 
 ### DijkstraSearch class
 #### *Explanation:*
+The BreadthFirstSearch class is an example implementation of the Search class. It uses the BFS algorithm to traverse the graph starting from a given start vertex. The bfs method returns a list of vertices visited during the traversal.
 #### *Here is the solution code:*
 ![](https://cbgd.ask.fm/fd3/71a30/7839/4756/8b72/0d5fc8e2f2c4/original/421914.jpg)
 
