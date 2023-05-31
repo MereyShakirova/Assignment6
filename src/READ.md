@@ -1,4 +1,4 @@
-# **Assignment 6 for laboratory work for  the Algorithm Data Structure **
+# Assignment 6 for laboratory work for  the Algorithm Data Structure 
 ![](https://avatars.mds.yandex.net/i?id=6d705f48c59872aa449f4a93da399e56-5658631-images-thumbs&n=13)
 ### Description:
 !(*In this assignment you are asked to implement BFS and Djakstra for Edge-weighted graph with Vertex instead of Edge.
